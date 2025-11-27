@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Marp presentation project for "「Claude CodeによるAI駆動開発入門」に書けなかったこと" (Deep Dive into Claude Code × AI-Driven Development with the Author). The repository contains Japanese presentation materials about Claude Code, AI-driven development practices, and best practices for using Claude Code effectively.
+This is a Marp presentation project for "「Claude CodeによるAI駆動開発入門」に書けなかったコト" (Deep Dive into Claude Code × AI-Driven Development with the Author). The repository contains Japanese presentation materials about Claude Code, AI-driven development practices, and best practices for using Claude Code effectively.
 
 ## Key Technologies
 

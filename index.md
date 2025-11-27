@@ -4,7 +4,7 @@ theme: kouen
 class: lead
 paginate: true
 backgroundColor: white
-header: "**Claude CodeによるAI駆動開発入門に書けなかったこと**"
+header: "**Claude CodeによるAI駆動開発入門に書けなかったコト**"
 ---
 <script src="https://cdn.tailwindcss.com/"></script>
 <script>tailwind.config = { corePlugins: { preflight: false } }</script>
@@ -15,9 +15,11 @@ section{
 }
 </style>
 
-# 「Claude CodeによるAI駆動開発入門」<br>に書けなかったこと
+# 「Claude CodeによるAI駆動開発入門」<br>に書けなかったコト
 
-## ＠熊井総研
+
+  <img  src="./image/kumai.png" alt="平川の写真" />
+
 
 ---
 
@@ -101,9 +103,11 @@ section{
 
 # 本日の御品書き
 
-1. 最近のアップデートキャッチアップ(Skills, Haiku4.5 、Opus4.5、, Claude Code on Web )
+1. 最近のアップデートキャッチアップ(Agent Skills, Haiku4.5 、Opus4.5、Claude Code on the Web )
+    - AgentSkills ハンズオン
+    - Claude Code on the Web ハンズオン
 2. あまり意識に上らないけど使っておくべき機能
-4. コーディングエージェントの違い
+4. ３つのコーディングエージェントの違い
 3. プロジェクトの大きさによるClaude Codeの操縦方法
   特に大きなプロジェクトのために・・・
     - コンテキストウィンドウを知る。それを純粋に保つ
@@ -128,14 +132,14 @@ Agent Skills, Claude Code on the web, （コンテキストウィンドウの理
 
 基本はAgent SkillsはマストKnow
 
-- **Agent Skills**
+### **Agent Skills**
 手順とプロンプトをClaude Codeに与えることができる。特定のタスクを実行するための小さなモジュール（スキル）を作成し、必要なタイミングで自動的に呼び出すことができる。
 **⇨ LLMの柔軟性と推論力、コードの実行力、省コンテキスト占有とメリット大**
 
 ----
 
 
-- **Haiku4.5**
+### **Haiku4.5**
 
 Sonnet4.5で十分制限いっぱい動くMAXプランでは旨みは薄い。
 従量課金でコストを下げたい方や制限のキツイProプランの方向け。Haikuで思考拡張モード（Ultrathink）で実行できるのもメリット。
@@ -156,17 +160,29 @@ Sonnet4.5で十分制限いっぱい動くMAXプランでは旨みは薄い。
 ---
 
 
-- **Opus4.5**
+### **Opus4.5**
 
 MAXプランおよびAPI課金で利用可能。
 
-API課金でも安い。早い。現時点でのベスト。
+API課金でも以前の4.1の3分の1の価格。早い。MAXプランだとデフォルトで選択。
 
 **こちらもワンショットでTODOリストを作ってみた**
 
 <a target="_blank" href="https://todo-app-six-lilac-86.vercel.app/">https://todo-app-six-lilac-86.vercel.app/</a>
 
 たまたまかもしれないが、ややリッチで高度ではある。
+
+---
+
+## API料金まとめ
+
+| モデル|	入力 (Input) |出力 (Output) |
+| :---: | :---: | :---: |
+| Opus 4.5 |	$5.00 / 100万トークン |	$25.00 / 100万トークン |
+| Opus 4.1 |	$15.00 / 100万トークン|	$75.00 / 100万トークン |
+| Sonnet 4.5 |	$3.00 / 100万トークン|	$15.00 / 100万トークン |
+| Haiku 4.5 |	$1.00 / 100万トークン|	$5.00 / 100万トークン |
+
 
 ---
 

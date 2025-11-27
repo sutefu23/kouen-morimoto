@@ -53,7 +53,7 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>「Claude CodeによるAI駆動開発入門」に書けなかったこと</title>
+              <title>「Claude CodeによるAI駆動開発入門」に書けなかったコト</title>
               <style>
                   * {
                       margin: 0;
@@ -126,7 +126,7 @@ jobs:
           </head>
           <body>
               <div class="container">
-                  <h1>「Claude CodeによるAI駆動開発入門」に書けなかったこと</h1>
+                  <h1>「Claude CodeによるAI駆動開発入門」に書けなかったコト</h1>
                   <p>Lancers TechBook#1</p>
                   <div class="slides">
                       <a href="./slides.html" class="slide-link">
