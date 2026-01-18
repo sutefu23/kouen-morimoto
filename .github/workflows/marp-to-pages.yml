@@ -126,18 +126,18 @@ jobs:
           </head>
           <body>
               <div class="container">
-                  <h1>「Claude CodeによるAI駆動開発入門」に書けなかったコト</h1>
+                  <h1>Claude Code講習スライド</h1>
                   <p>Lancers TechBook#1</p>
                   <div class="slides">
                       <a href="./slides.html" class="slide-link">
-                          📊 メインスライド
+                          📊 応用編スライド
                       </a>
                       <a href="./primary.html" class="slide-link secondary">
-                          📚 Claude Code入門
+                          📚 森本さん用Claude Code入門
                       </a>
                   </div>
                   <footer>
-                      ランサーズ テックエージェント様主催
+                      
                   </footer>
               </div>
           </body>

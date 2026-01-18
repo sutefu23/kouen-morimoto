@@ -9,6 +9,47 @@ backgroundColor: white
 # はじめての Claude Code
 
 ---
+
+# 著作の紹介
+
+12月5日刊行　日本で初めてのClaude Code刊行本<br>
+「Claude CodeによるAI駆動開発入門」
+教科書になることを目指しました。
+<div class="columns">
+  <div class="text-[28px]">
+1章Claude Code入門と開発環境構築<br>
+2章Claude CodeによるAI駆動開発の基礎<br>
+3章MCPを活用したAIチャットボット開発<br>
+4章並行処理とサブエージェントを使った開発手法<br>
+5章セキュリティと応用的な活用
+</div>
+<div>
+<a target="_blank" href="https://www.amazon.co.jp/dp/4297152754/">
+  <img src="./image/book.png" alt="Claude Codeの本" style="height:50vh"/>
+</a>
+</div>
+<div>
+
+
+---
+<style scoped>
+section{
+  text-align:center;
+}
+</style>
+# お陰様でAmazonランキング1位獲得
+
+「ソフトウェア開発・言語」「生成AI」「コンピューター・IT」ジャンル1位
+紀伊國屋書店・ジュンク堂PCフロア週間ランキング1位
+
+12月・1月講演参加者はエンジニア1,000人（申込者は3,000人くらい）
+
+<a target="_blank" href="https://www.amazon.co.jp/dp/4297152754/">
+<img src="./image/pop.png" width="600px" alt="Claude Codeのシェア" />
+</a>
+
+---
+
 <style scoped>
 session {
   font-size: 24px;
@@ -18,20 +59,19 @@ p{
 }
 </style>
 
-# Claude Codeとは
+# Claude Codeが流行った理由
 
-Anthropic社が開発したCLIツール
+コードの理解と実装に特化したエンジン（CLI）のみを提供
 
-### 何が嬉しいのか
-
-- 環境を選ばずインストールして動作してくれる。
-- コード全体を理解しながら動作してくれる
-- よって応用範囲が広く、自由度も高い。
+- 環境を選ばずインストールして動作可能。
+- コード全体を理解しながら動作可能
+- 応用範囲が広く、チューニングの自由度も高い。
 - CLIの特徴を活かして複数立ち上げての並行処理などが可能
+
 
 ---
 
-### **Claude Code の活用シーン**
+## **Claude Code の活用シーン**
 
 1. **新規機能の実装** - 要件を伝えるだけで設計から実装まで
 2. **バグ修正** - エラーログから原因特定と修正案の提示
@@ -41,6 +81,7 @@ Anthropic社が開発したCLIツール
 6. **技術調査** - 新しいライブラリやフレームワークの学習支援
 
 ---
+
 <style scoped>
 section{
   font-size:2em;
@@ -171,85 +212,50 @@ claude --dangerously-skip-permissions
 
 ---
 
-# MCPサーバーとは
+# ハンズオン
 
-- MCPはLLMと外部ツールがやり取りするための通信規格
+- TODOリスト
+- AIチャット
+- 営業日報
 
-- MCPサーバーはその通信規格を使って外部ツールやデータへのアクセスを提供
-結果的に拡張機能として様々な能力をClaudeに与える
+---
+# プロンプト
 
-  
-## 何が嬉しいの？
-
-Goolg DriveやGitHub、Jira、Notionなどの読込、書き込みなど、外部サービスと連携可能
+- シングルショット
+- フューショット
+- マルチショット
 
 ---
 
-# MCPサーバーの設定
+# TODOアプリケーションを作る
 
 ```
-claude mcp add <MCPサーバーの名前> <MCPサーバーのURLや立ち上げコマンド>
+> TODOアプリケーションを作って
 ```
+一発で実装　Vercelにアップ。
 
 ---
 
-# おすすめMCPサーバー
+# AIチャットボット
 
-### - **Context7**
-### - **Playwright**
-### - **Serena**
+要件定義を一度Claude Codeと相談して壁打ちする。
+⇨ TODOに分割してMDファイルに落とし、一つ一つ実装させる
 
----
 
-# Context7
-
-Context7は各ライブラリやフレームワーク、APIドキュメントなどの技術ドキュメントをClaudeに提供し、コード生成や修正、レビューの精度を向上させる。
-
-### - **インストール方法**
-```bash
-claude mcp add context7 -s user -- npx -y @upstash/context7-mcp
-```
-
-#### - **使い方**
-プロンプトで何かライブラリを使いたいときに`use context7`と言って呼び出す
-```bash
-> TODOアプリをNext.jsのApp Routerを使って作ってください。データはローカルに保存してください。 use context7
-```
 
 ---
 
-## **Playground**
+# 営業日報をClaudeと作る
 
-フロントの表示確認、エラー確認、動作確認など、Claude Codeに目を付ける事ができる。
+要件定義を一度GitHub Issueにあげて一つ一つ実装
 
-## - **インストール方法**
-```bash
-claude mcp add Playwright npx @Playwright/mcp@latest
+```例
+・エンジニアは複数のプロジェクトにアサインされている
+・エンジニアは今日対応した各プロジェクト名と稼働時間を毎日記載しなければならない
+
+・それとは別に今日の日報として、進捗（Progress）、今の課題（Problem）、明日やること(Plan)を書き、そこに上長がコメントできる
 ```
 
-## - **使い方**
-「PlaywrightMCPサーバーで確認して、直るまで修正を繰り返して」と伝えると効果的。Consoleエラーなども取得可能。
-
-最近はChrome MCPサーバーも人気。Chrome MCPはログインセッションなども引き継げる。
-
----
-
-## **Serena**
-SerenaはIDEと同じようにLSP（Language Server Protocol）を提供することで（脚注）、Claudeに対してより深いコード理解をもたらす。
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-```bash
-claude mcp add serena \
-  -- uvx --from git+https://github.com/oraios/serena serena-mcp-server \
-  --context ide-assistant --project $(pwd)
-```
-
-## 使い方
-
-プロジェクトにインストールすればClaudeを立ち上げた際に自動で立ち上がる。
 
 ---
 
@@ -284,6 +290,70 @@ Git Worktreeを使うと追加のcloneをせずに、同じ.gitを共有して�
 特に立ち上がり時などは力を発揮する。
 
 ---
+
+# MCPサーバーとは
+
+- MCPはLLMと外部ツールがやり取りするための通信規格
+
+- MCPサーバーはその通信規格を使って外部ツールやデータへのアクセスを提供
+結果的に拡張機能として様々な能力をClaudeに与える
+
+  
+## 何が嬉しいの？
+
+Goolg DriveやGitHub、Jira、Notionなどの読込、書き込みなど、外部サービスと連携可能
+
+---
+
+# Agent Skillsって？
+
+手順とコマンドをまとめたもので、ClaudeCodeにさまざまな機能をつけることができる。
+
+例：エクセルの読み込み、UIデザイン、分析ツール
+
+## 何が嬉しいの？
+
+コンテキスト効率が高く、実行精度が高い。再利用性が高い。
+
+---
+
+# サブエージェントって？
+
+エージェントに特定のコンテキストを持たせて、メインエージェントから独立して動かすことができる。
+
+例：バックエンドエキスパート、クラウドコストマネージャー、セキュリティレビュアー等
+
+## 何が嬉しいの？
+
+メインエージェントから独立した形で、エージェントに特定の指向性・専門性を持たせられる。
+
+---
+
+# 応用的な使い方
+
+オーストレーション
+https://x.com/akira_papa_IT/status/1932547492199182733
+
+
+---
+
+# 敢えてデメリットを語る
+
+コードベースの理解、精製の理解度は高くVibeコーディングツールとしては最高だがコード内をエンジニアが読まなくなりがち。
+
+AIとペアプログラミング色の強いCurosorの方が実務上は便利と感じることもある。
+
+---
+
+# CLIの違い
+
+- GeminiCLI ・・・長大コンテキスト。巨大コード理解、ビジネス理解、Figmaからのコンポーネント出力
+
+- Claude Code・・・コード理解、コード出力精度、カスタマイズ性
+
+- Codex ・・・バランス、精度
+
+---
 <style scoped>
 section {
   text-align: center;
@@ -292,3 +362,29 @@ section {
 # これを100倍詳しく書いたのが<br><br>「Claude CodeによるAI駆動開発入門」
 
 <a href="https://www.amazon.co.jp/dp/4297152754/" target="_blank"><img src="./image/book.png" alt="Claude CodeによるAI駆動開発入門" /></a>
+
+---
+
+# 他にも講演・講習できる事
+
+**⇨ ジュニアからミドル、ミドルからシニアへのエンジニアへの階段**
+
+### テスト
+- 単体テストの有効性とコードの凝集度の話
+
+### バックエンド・設計
+- ドメイン駆動設計の解説とメリット
+- 実践的なSOLID原則
+
+### フロントエンド
+- Reactの基礎とNext.jsのキャッシュ戦略
+
+---
+
+### インフラ　
+- AWS・GCインフラ構成ノック
+- Webサーバー・メールサーバー構築ハンズオン
+
+### 認証・セキュリティ
+- ログインの実装ハンズオン
+- Webアプリケーション開発で知るべき基礎的注意点
